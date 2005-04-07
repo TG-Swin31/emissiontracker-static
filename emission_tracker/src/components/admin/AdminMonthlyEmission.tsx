@@ -10,13 +10,16 @@ import {
 import { chevronForwardOutline } from 'ionicons/icons';
 import '../../theme/general.scss';
 import './AdminMonthlyEmission.scss';
+import { IonRouterLink } from '@ionic/react';
 
 const AdminMonthlyEmission: React.FC = () => {
   return (
     <IonCard className="card">
       <div className="card-header">
         <span className="title">Emissions – April 2025</span>
-        <span className="details"><a href="/admin/emissions">Details<IonIcon icon={chevronForwardOutline} className="details-icon" /></a></span>
+        <span className="details">
+          <IonRouterLink routerLink="/admin/emissions">Details<IonIcon icon={chevronForwardOutline} className="details-icon" /></IonRouterLink>
+          </span>
       </div>
       <IonCardContent>
         <IonGrid className="grid">

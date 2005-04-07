@@ -9,6 +9,7 @@ import Header from '../../components/general/Header';
 import RequestsTable from '../../components/manager/RequestTable';
 import MonthlyEmissions from '../../components/manager/MonthlyEmissions';
 import SimpleRequestsTable from '../../components/manager/SimpleRequestTable';
+import { IonRouterLink } from '@ionic/react';
 
 
 const ManagerDashboard: React.FC = () => {
@@ -49,7 +50,7 @@ const ManagerDashboard: React.FC = () => {
                 <MonthlyEmissions linkTo="/manager/emissions" />
                 <div className="section-title">Latest Requests</div>
                 <SimpleRequestsTable></SimpleRequestsTable>
-                <a href="manager/requests" className="card-button">
+                <IonRouterLink routerLink="manager/requests" className="card-button">
                     <IonCard className="card hover">
                         <IonCardContent>
                         <IonGrid className="grid">
@@ -61,7 +62,7 @@ const ManagerDashboard: React.FC = () => {
                         </IonGrid>
                         </IonCardContent>
                     </IonCard>
-                </a>
+                </IonRouterLink>
             </div>
         </IonContent>
     </IonPage>

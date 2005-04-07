@@ -3,6 +3,7 @@ import '../../theme/general.scss';
 import './FleetsTable.scss';
 import AddFleetModal from './AddFleetModal';
 import axios from 'axios';
+import { IonRouterLink } from '@ionic/react';
 
 interface FleetData {
   name: string;
@@ -62,9 +63,9 @@ const FleetsTable: React.FC = () => {
                 <td>{fleet.trucks}</td>
                 <td>{fleet.co2}</td>
                 <td>
-                  <a href="/admin/fleet-details" style={{ cursor: 'pointer', textDecoration: 'underline' }}>
+                  <IonRouterLink routerLink="/admin/fleet-details" style={{ cursor: 'pointer', textDecoration: 'underline' }}>
                     More Info
-                  </a>
+                  </IonRouterLink>
                 </td>
               </tr>
             ))}

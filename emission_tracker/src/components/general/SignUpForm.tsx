@@ -8,7 +8,7 @@ import {
 } from '@ionic/react';
 import Input from './Input'; // Import the Input component
 import '../../theme/general.scss';
-
+import { IonRouterLink } from '@ionic/react';
 const SignupForm: React.FC = () => {
   return (
     <IonCard>
@@ -37,9 +37,9 @@ const SignupForm: React.FC = () => {
 
         <div style={{ textAlign: 'center'}}>
           Already have an account?{' '}
-          <a href="/login" style={{ color: '#6e6e6e' }}>
+          <IonRouterLink routerLink="/login" style={{ color: '#6e6e6e' }}>
             Login
-          </a>
+          </IonRouterLink>
         </div>
       </IonCardContent>
     </IonCard>

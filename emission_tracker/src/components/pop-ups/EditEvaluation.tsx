@@ -18,6 +18,7 @@ import {
 import { close } from 'ionicons/icons';
 import '../../theme/general.scss';
 import './EvaluateRequest.scss'
+import { IonRouterLink } from '@ionic/react';
 
 interface EvaluateRequestProps {
   isOpen: boolean;
@@ -54,7 +55,9 @@ const EditEvaluation: React.FC<EvaluateRequestProps> = ({ isOpen, closePopup, re
           <IonInput readonly value={request.requester} />
         </IonItem>
         <IonItem lines="none">
-          <IonLabel>Verify Generated Report: <a href="/manager/requests#">Download</a></IonLabel>
+          <IonLabel>Verify Generated Report: <IonRouterLink routerLink="/manager/requests#">Download
+          </IonRouterLink>
+          </IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel position="stacked">Note</IonLabel>

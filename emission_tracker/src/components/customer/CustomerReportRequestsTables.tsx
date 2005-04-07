@@ -16,6 +16,7 @@ import {
 import '../../theme/general.scss';
 import './CustomerReportRequestsTables.scss';
 import { request } from 'http';
+import { IonRouterLink } from '@ionic/react';
 
   export type TabType = 'Pending' | 'Approved' | 'Rejected';
 
@@ -119,12 +120,12 @@ const tabHeaderFields: Record<TabType, { label: string; key: string }[]> = {
               {tabHeaderFields[selectedTab].map((field, colIndex) => (
                 <IonCol key={colIndex} data-label={field.label}>
                   {field.key === "action" ? (
-                    <a href="./#" onClick={(e) => {
+                    <IonRouterLink routerLink="./#" onClick={(e) => {
                       e.preventDefault();
                       handleMoreInfo(item);
                     }}>
                       More Info
-                    </a>
+                    </IonRouterLink>
                   ) : ["Pending", "Approved", "Rejected"].includes(item[field.key]) ? (
                     <IonChip color={
                       item[field.key] === "Pending" ? "warning" :

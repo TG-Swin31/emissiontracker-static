@@ -10,7 +10,7 @@ import {
 import Input from './Input';
 import ForgotPasswordForm from './ForgotPasswordForm';
 import '../../theme/general.scss';
-
+import { IonRouterLink } from '@ionic/react';
 const LoginForm: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -95,9 +95,9 @@ const LoginForm: React.FC = () => {
 
           <div style={{ textAlign: 'center' }}>
             Don't have an account?{' '}
-            <a href="/signup" style={{ color: '#6e6e6e' }}>
+            <IonRouterLink routerLink="/signup" style={{ color: '#6e6e6e' }}>
               Sign Up
-            </a>
+            </IonRouterLink>
           </div>
         </IonCardContent>
       </IonCard>
