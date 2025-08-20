@@ -11,6 +11,7 @@ import { chevronForwardOutline } from 'ionicons/icons';
 import '../../theme/general.scss';
 import './MonthlyEmissions.scss';
 import { useGeotabData } from '../../hooks/useGeotabData';
+import { IonRouterLink } from '@ionic/react';
 
 interface MonthlyEmissionsProps {
   linkTo: string;
@@ -49,9 +50,9 @@ const MonthlyEmissions: React.FC<MonthlyEmissionsProps> = ({ linkTo }) => {
       <div className="card-header">
         <span className="title">Emissions – {monthName}</span>
         <span className="details">
-          <a href={linkTo}>
+          <IonRouterLink routerLink={linkTo}>
             Details<IonIcon icon={chevronForwardOutline} className="details-icon" />
-          </a>
+          </IonRouterLink>
         </span>
       </div>
       <IonCardContent>

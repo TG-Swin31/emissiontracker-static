@@ -5,6 +5,7 @@ import {
 } from '@ionic/react';
 import { close } from 'ionicons/icons';
 import './EvaluateRequest.scss'
+import { IonRouterLink } from '@ionic/react';
 
 interface OverrideRequestProps {
   isOpen: boolean;
@@ -54,9 +55,9 @@ const OverrideRequest: React.FC<OverrideRequestProps> = ({ isOpen, closePopup, r
         <IonItem lines="none">
           <IonLabel>
             Verify Generated Report:{' '}
-            <a href="#" onClick={(e) => { e.preventDefault(); handleDownload(); }}>
+            <IonRouterLink routerLink="#" onClick={(e) => { e.preventDefault(); handleDownload(); }}>
               Download
-            </a>
+            </IonRouterLink>
           </IonLabel>
         </IonItem>
 

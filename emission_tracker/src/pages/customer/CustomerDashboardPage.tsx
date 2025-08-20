@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useUser } from "../../context/UserContext";
 import "../../theme/general.scss";
 import "../general/Home.css";
+import { IonRouterLink } from '@ionic/react';
 
 import {
   IonCard,
@@ -82,7 +83,7 @@ const CustomerDashboardPage: React.FC = () => {
 
           <CustomerRequestsTable />
 
-          <a href="customer/reports" className="card-button">
+          <IonRouterLink routerLink="customer/reports" className="card-button">
             <IonCard className="card hover">
               <IonCardContent>
                 <IonGrid className="grid">
@@ -96,7 +97,7 @@ const CustomerDashboardPage: React.FC = () => {
                 </IonGrid>
               </IonCardContent>
             </IonCard>
-          </a>
+          </IonRouterLink>
         </div>
       </IonContent>
 
