@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
-  "homepage": "https://user4441102.github.io/emissiontracker-static",
+  "homepage": "https://tg-swin31.github.io/emissiontracker-static/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

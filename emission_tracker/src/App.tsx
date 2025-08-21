@@ -57,7 +57,7 @@ setupIonicReact();
 const App: React.FC = () => (
   <UserProvider>
     <IonApp>
-      <IonReactRouter>
+      <IonReactRouter basename="/emissiontracker-static">
         <IonRouterOutlet>
           <Route exact path="/home">
             <Home />
